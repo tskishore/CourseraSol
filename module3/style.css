@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: black;
+}
+
+.container-fluid{
+	margin: 0;
+	padding: 0;
+}
+
+.navbar{
+	background-color: rgba(0,0,0,0.8);
+}
+
+.navbar-brand{
+  font-size: 35px;
+  color: white;
+  padding-left: 25px;
+}
+
+.navbar-brand:hover{
+	color: white;
+}
+
+.nav{
+	margin: 0;
+	padding: 0;
+}
+
+.navbar-nav{
+  font-size: 25px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-toggle{
+	border: 2px solid white;
+	margin-right: 25px;
+}
+
+.icon-bar{
+	background-color: white;
+}
+
+
+nav h1{
+    color: white;
+    font-weight: bolder;
+}
+
+li{
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.heading{
+    text-align: center;
+    margin: 20px 0px 50px 0px;
+    font-size: 3em;
+    color: navy;
+}
+
+nav{
+    background-color: gray;
+}
+
+nav h1{
+    font-size: 3em;
+}
+
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.item1, .item2, .item3{
+    background-color:lightgray;
+    margin: 0 10px;
+    padding: 0 5px 5px 5px;
+}
+
+.item1 h3, .item2 h3, .item3 h3{
+   
+    font-size:2em;
+    margin: 5px auto;
+    text-align: center;
+    padding-top: 10px;
+
+}
+
+.item1 p, .item2 p, .item3 p{
+    padding: 20px;
+}
+
+
+
+/*  media queries*/
+
+
+@media (max-width: 991px){
+
+    .item1 { grid-area: one; }
+    .item2 { grid-area: two; }
+    .item3 { 
+        grid-area: three; 
+        margin-top: 20px;
+    }
+    .menu{
+        display: grid;
+        grid-template-areas: 'one two'
+                            'three three';
+    }
+
+}
+
+@media (max-width : 767px){
+
+    .menu{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item1, .item2, .item3{
+        margin: 20px 10px;
+    }
+}
